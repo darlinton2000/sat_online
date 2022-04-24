@@ -14,10 +14,10 @@ class ParecerSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('parecer')->insert([
+        DB::table('parecer')->insert([[
             'parecer' => 'DEVE SER concedido tendo em vista atender à legislação vigente'
         ],[
             'parecer' => 'NÃO DEVE ser concedido tendo em vista não atender à legislação vigente'
-        ]);
+        ]]);
     }
 }

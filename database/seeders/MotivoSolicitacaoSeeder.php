@@ -14,12 +14,12 @@ class MotivoSolicitacaoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('motivo_solicitacao')->insert([
+        DB::table('motivo_solicitacao')->insert([[
             'descricao' => 'Promoção'
         ],[
             'descricao' => 'Endereço'
         ],[
             'descricao' => 'Reajuste'
-        ]);
+        ]]);
     }
 }

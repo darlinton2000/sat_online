@@ -14,10 +14,10 @@ class TipoPercursoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('tipo_percurso')->insert([
+        DB::table('tipo_percurso')->insert([[
             'descricao' => 'Percurso de Ida'
         ],[
             'descricao' => 'Percurso de Volta'
-        ]);
+        ]]);
     }
 }

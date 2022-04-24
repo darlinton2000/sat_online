@@ -14,7 +14,7 @@ class LocalCirculacaoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('local_circulacao')->insert([
+        DB::table('local_circulacao')->insert([[
             'descricao' => 'Dentro de Resende x AMAN'
         ],[
             'descricao' => 'De Cidade A x Rod. Resende x AMAN'
@@ -22,6 +22,6 @@ class LocalCirculacaoSeeder extends Seeder
             'descricao' => 'De Cidade A x Cidade B x Rod. Resende x AMAN'
         ],[
             'descricao' => 'De Cidade A x Cidade B x Cidade C x Rod. Resende x AMAN'
-        ]);
+        ]]);
     }
 }

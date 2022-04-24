@@ -14,7 +14,7 @@ class LinhaOnibusSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('linha_onibus')->insert([
+        DB::table('linha_onibus')->insert([[
             'nome' => '105-Liberdade/Vicentina'
         ],[
             'nome' => '125-Jd. Primavera/Cooperativa'
@@ -26,6 +26,6 @@ class LinhaOnibusSeeder extends Seeder
             'nome' => '140-Campos Elíseos/B. Olaria'
         ],[
             'nome' => '145-Rodoviária/Fazenda Barra II'
-        ]);
+        ]]);
     }
 }

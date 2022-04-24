@@ -14,12 +14,12 @@ class OmSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('om')->insert([
+        DB::table('om')->insert([[
             'nome' => 'Academia Militar das Agulhas Negras',
             'abrev' => 'AMAN'
         ],[
             'nome' => 'Batalhão de Comando e Serviços',
             'abrev' => 'BCSv/AMAN'
-        ]);
+        ]]);
     }
 }

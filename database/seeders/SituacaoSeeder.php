@@ -14,10 +14,10 @@ class SituacaoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('situacao')->insert([
+        DB::table('situacao')->insert([[
             'descricao' => 'Ativo'
         ],[
             'descricao' => 'Inativo'
-        ]);
+        ]]);
     }
 }

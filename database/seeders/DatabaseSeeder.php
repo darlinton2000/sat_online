@@ -23,11 +23,11 @@ class DatabaseSeeder extends Seeder
             NivelAcessoSeeder::class,
             OmSeeder::class,
             ParecerSeeder::class,
+            TipoPercursoSeeder::class,
             PercursoSeeder::class,
             SetorSeeder::class,
             SituacaoSeeder::class,
             SubunidadeSeeder::class,
-            TipoPercursoSeeder::class,
             ValorSeeder::class
         ]);
     }

@@ -14,7 +14,7 @@ class NivelAcessoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('nivel_acesso')->insert([
+        DB::table('nivel_acesso')->insert([[
             'descricao' => 'Usuario',
         ],[
             'descricao' => 'Furriel',
@@ -22,6 +22,6 @@ class NivelAcessoSeeder extends Seeder
             'descricao' => 'Cmt Cia',
         ],[
             'descricao' => 'Administrador',
-        ]);
+        ]]);
     }
 }

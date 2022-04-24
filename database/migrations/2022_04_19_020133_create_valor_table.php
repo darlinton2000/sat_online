@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClassificacaoLinhaValorTable extends Migration
+class CreateValorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -27,6 +27,6 @@ class CreateClassificacaoLinhaValorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classificacao_linha_valor');
+        Schema::dropIfExists('valor');
     }
 }

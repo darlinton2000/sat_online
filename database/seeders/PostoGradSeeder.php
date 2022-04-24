@@ -14,7 +14,7 @@ class PostoGradSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('posto_grad')->insert([
+        DB::table('posto_grad')->insert([[
             'abrev_posto_grad' => 'Sd Ev',
             'posto_grad' => 'Soldado Efetivo Variável',
             'soldo' => 956.00,
@@ -84,6 +84,6 @@ class PostoGradSeeder extends Seeder
             'posto_grad' => 'Coronel',
             'soldo' => 11451.00,
             'cota_parte' => 362.78
-        ]);
+        ]]);
     }
 }

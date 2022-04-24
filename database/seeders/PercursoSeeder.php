@@ -14,7 +14,7 @@ class PercursoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('percurso')->insert([
+        DB::table('percurso')->insert([[
             'descricao' => 'Residência-Trabalho',
             'tipo_percurso_id' => 1
         ],[
@@ -44,6 +44,6 @@ class PercursoSeeder extends Seeder
         ],[
             'descricao' => 'Trabalho-Trecho 1-Trecho2-Trecho 3-Trecho 4-Residência',
             'tipo_percurso_id' => 2
-        ]);
+        ]]);
     }
 }

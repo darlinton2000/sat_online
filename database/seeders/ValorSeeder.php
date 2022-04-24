@@ -14,7 +14,7 @@ class ValorSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('valor')->insert([
+        DB::table('valor')->insert([[
             'valor' => 4.00
         ],[
             'valor' => 4.05
@@ -68,6 +68,6 @@ class ValorSeeder extends Seeder
             'valor' => 9.55
         ],[
             'valor' => 9.75
-        ]);
+        ]]);
     }
 }

@@ -14,7 +14,7 @@ class EmpresaOnibusSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('empresa_onibus')->insert([
+        DB::table('empresa_onibus')->insert([[
             'descricao' => 'Auto Comercial Barra Mansa'
         ],[
             'descricao' => 'Bem-Te-Vi Transporte Ltda'
@@ -30,6 +30,6 @@ class EmpresaOnibusSeeder extends Seeder
             'descricao' => 'Gran Eufrásia Turística Ltda'
         ],[
             'descricao' => 'Porto Real Transporte Coletivo Ltda'
-        ]);
+        ]]);
     }
 }

@@ -14,7 +14,7 @@ class ClassificacaoTransporteSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('classificacao_transporte')->insert([
+        DB::table('classificacao_transporte')->insert([[
             'descricao' => 'Coletivo Municipal'
         ],[
             'descricao' => 'Intermunicipal Urbano'
@@ -24,6 +24,6 @@ class ClassificacaoTransporteSeeder extends Seeder
             'descricao' => 'Transporte Regular Semi-Direto'
         ],[
             'descricao' => 'Transporte Regular Direto'
-        ]);
+        ]]);
     }
 }

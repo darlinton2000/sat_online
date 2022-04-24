@@ -14,7 +14,7 @@ class SubunidadeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('subunidade')->insert([
+        DB::table('subunidade')->insert([[
             'nome' => 'Companhia de Polícia do Exército',
             'abreviacao' => 'Cia PE'
         ],[
@@ -38,6 +38,6 @@ class SubunidadeSeeder extends Seeder
         ],[
             'nome' => '2ª Companhia Auxiliar do Corpo de Cadetes',
             'abreviacao' => '2ª Cia Aux'
-        ]);
+        ]]);
     }
 }

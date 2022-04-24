@@ -14,7 +14,7 @@ class SetorSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('setor')->insert([
+        DB::table('setor')->insert([[
             'nome' => 'Companhia de Polícia do Exército',
             'abrev' => 'Cia PE'
         ],[
@@ -74,6 +74,6 @@ class SetorSeeder extends Seeder
         ],[
             'nome' => 'Divisão Administrativa',
             'abrev' => 'Div Adm'
-        ]);
+        ]]);
     }
 }

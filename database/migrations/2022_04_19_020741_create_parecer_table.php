@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClassificacaoParecerTable extends Migration
+class CreateParecerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -27,6 +27,6 @@ class CreateClassificacaoParecerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classificacao_parecer');
+        Schema::dropIfExists('parecer');
     }
 }
