@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="{{ route('home') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Início
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -47,7 +47,7 @@
                             Cadastro
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Militar</a>
+                                <a class="dropdown-item" href="{{ route('users.index') }}">Militar</a>
                                 <a class="dropdown-item" href="#">Solicitação</a>
                             </div>
                         </li>

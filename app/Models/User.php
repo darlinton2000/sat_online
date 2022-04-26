@@ -49,4 +49,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function posto_grad()
+    {
+        return $this->belongsTo(PostoGrad::class, 'posto_grad_id');
+    }
+
+    public function subunidade()
+    {
+        return $this->belongsTo(Subunidade::class, 'subunidade_id');
+    }
+
+    public function setor()
+    {
+        return $this->belongsTo(Setor::class, 'setor_id');
+    }
+
+    public function om()
+    {
+        return $this->belongsTo(Om::class, 'om_id');
+    }
 }
