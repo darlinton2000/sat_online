@@ -19,12 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('cpf')->unique();
             $table->string('prec_cp')->unique()->nullable();
             $table->string('idt_militar')->unique()->nullable();
-            $table->foreignId('posto_grad_id')->constrained('posto_grad');
-            $table->foreignId('companhia_id')->constrained('companhia');
-            $table->foreignId('setor_id')->constrained('setor');
-            $table->foreignId('om_id')->constrained('om');
-            $table->foreignId('nivel_acesso_id')->constrained('nivel_acesso')->default(1);
-            $table->string('email')->unique();
+            $table->foreignId('posto_grad_id')->nullable()->constrained('posto_grad');
+            $table->foreignId('subunidade_id')->nullable()->constrained('subunidade');
+            $table->foreignId('setor_id')->nullable()->constrained('setor');
+            $table->foreignId('om_id')->nullable()->constrained('om');
+            $table->foreignId('nivel_acesso_id')->default(1)->nullable()->constrained('nivel_acesso');
+            $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
