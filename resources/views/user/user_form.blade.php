@@ -2,8 +2,17 @@
 
 @section('content')
 <div class="container">
-    <form action="{{ route('users.store') }}" class="form" method="POST">
+    <form 
+    @if (isset($user))
+        action="{{ route('users.update', $user) }}"
+    @else 
+        action="{{ route('users.store') }}"  
+    @endif
+    class="form" method="POST">
         @csrf
+        @isset($user)
+            @method('PUT')
+        @endisset
 
         <div class="form-group row">
             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nome') }}</label>
@@ -65,9 +74,10 @@
             <label for="posto_grad" class="col-md-4 col-form-label text-md-right">{{ __('Posto/Grad') }}</label>
 
             <div class="col-md-6">
-                <select class="custom-select" name="posto_grad" id="posto_grad">
+                <select class="custom-select" name="posto_grad_id" id="posto_grad">
+                    <option value=""></option>
                     @foreach ($posto_grads as $posto_grad)
-                        <option value="{{ $posto_grad->id }}" @if (isset($user->posto_grad) && $user->posto_grad == $posto_grad->id) selected @elseif (old('posto_grad') == $posto_grad->id) selected @endif >{{ $posto_grad->abrev_posto_grad }}</option>
+                        <option value="{{ $posto_grad->id }}" @if (isset($user->posto_grad_id) && $user->posto_grad_id == $posto_grad->id) selected @elseif (old('posto_grad_id') == $posto_grad->id) selected @endif >{{ $posto_grad->abrev_posto_grad }}</option>
                     @endforeach
                 </select>
 
@@ -83,9 +93,10 @@
             <label for="subunidade" class="col-md-4 col-form-label text-md-right">{{ __('Subunidade') }}</label>
 
             <div class="col-md-6">
-                <select class="custom-select" name="subunidade" id="subunidade">
+                <select class="custom-select" name="subunidade_id" id="subunidade">
+                    <option value=""></option>
                     @foreach ($subunidades as $subunidade)
-                        <option value="{{ $subunidade->id }}" @if (isset($user->subunidade) && $user->subunidade == $subunidade->id) selected @elseif (old('subunidade') == $subunidade->id) selected @endif >{{ $subunidade->abreviacao }}</option>
+                        <option value="{{ $subunidade->id }}" @if (isset($user->subunidade_id) && $user->subunidade_id == $subunidade->id) selected @elseif (old('subunidade_id') == $subunidade->id) selected @endif >{{ $subunidade->abreviacao }}</option>
                     @endforeach
                 </select>
 
@@ -101,9 +112,10 @@
             <label for="setor" class="col-md-4 col-form-label text-md-right">{{ __('Setor') }}</label>
 
             <div class="col-md-6">
-                <select class="custom-select" name="setor" id="setor">
+                <select class="custom-select" name="setor_id" id="setor">
+                    <option value=""></option>
                     @foreach ($setores as $setor)
-                        <option value="{{ $setor->id }}" @if (isset($user->setor) && $user->setor == $setor->id) selected @elseif (old('setor') == $setor->id) selected @endif >{{ $setor->abrev }}</option>
+                        <option value="{{ $setor->id }}" @if (isset($user->setor_id) && $user->setor_id == $setor->id) selected @elseif (old('setor_id') == $setor->id) selected @endif >{{ $setor->abrev }}</option>
                     @endforeach
                 </select>
 
@@ -119,9 +131,10 @@
             <label for="om" class="col-md-4 col-form-label text-md-right">{{ __('OM') }}</label>
 
             <div class="col-md-6">
-                <select class="custom-select" name="om" id="om">
+                <select class="custom-select" name="om_id" id="om">
+                    <option value=""></option>
                     @foreach ($oms as $om)
-                        <option value="{{ $om->id }}" @if (isset($user->om) && $user->om == $om->id) selected @elseif (old('om') == $om->id) selected @endif >{{ $om->abrev }}</option>
+                        <option value="{{ $om->id }}" @if (isset($user->om_id) && $user->om_id == $om->id) selected @elseif (old('om_id') == $om->id) selected @endif >{{ $om->abrev }}</option>
                     @endforeach
                 </select>
 

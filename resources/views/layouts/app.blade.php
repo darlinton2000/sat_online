@@ -33,12 +33,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        @auth
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="{{ route('home') }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Início
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Meus dados</a>
+                                <a class="dropdown-item" href="{{ route('users.edit', auth()->user()) }}">Meus dados</a>
                                 <a class="dropdown-item" href="#">Minhas Solicitações</a>
                             </div>
                         </li>
@@ -60,6 +61,7 @@
                                 <a class="dropdown-item" href="#">Minhas Solicitações</a>
                             </div>
                         </li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

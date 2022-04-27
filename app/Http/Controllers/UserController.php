@@ -69,7 +69,13 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('user.user_form', [
+            'user' => $user,
+            'posto_grads' => PostoGrad::all(),
+            'subunidades' => Subunidade::all(),
+            'setores' => Setor::all(),
+            'oms' => Om::all()
+        ]);
     }
 
     /**
@@ -81,7 +87,26 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        try {
+            $user->name = $request->name;
+            $user->cpf = $request->cpf;
+            $user->prec_cp = $request->prec_cp;
+            $user->idt_militar = $request->idt_militar;
+            $user->posto_grad_id = $request->posto_grad_id;
+            $user->subunidade_id = $request->subunidade_id;
+            $user->setor_id = $request->setor_id;
+            $user->om_id = $request->om_id;
+            
+            $user->save();
+            
+            $key = 'success';
+            $message = "Usuário {$user->name} atualizado com sucesso.";
+        } catch (\Exception $e) {
+            $key = 'error';
+            $message = 'Erro ao atualizar o usuário: ' . $e->getMessage();
+        }
+    
+        return redirect(route('users.index'))->with($key, $message);
     }
 
     /**
