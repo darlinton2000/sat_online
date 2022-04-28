@@ -87,6 +87,12 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $request->validate([
+            'name' => 'required|min:4',
+            'cpf' => 'digits:11',
+            'prec_cp' => 'digits:9',
+            'idt_militar' => 'digits:10'
+        ]);
         try {
             $user->name = $request->name;
             $user->cpf = $request->cpf;

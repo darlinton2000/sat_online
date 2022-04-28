@@ -15,7 +15,7 @@
     @endif
 
     <div class="container">
-        <a href="{{ route('users.create') }}" class="btn btn-success mb-3">Cadastrar Militar</a href="{{ route('users.create') }}">
+        <a href="{{ route('users.create') }}" class="btn btn-success mb-3">Cadastrar Militar</a>
     </div>
     <table class="table table-sm">
         <thead>

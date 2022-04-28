@@ -9,15 +9,13 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/select2.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -49,7 +47,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('users.index') }}">Militar</a>
-                                <a class="dropdown-item" href="#">Solicitação</a>
+                                <a class="dropdown-item" href="{{ route('sat.index') }}">Solicitação</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -107,5 +105,11 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+
+    @stack('script')
+
 </body>
 </html>

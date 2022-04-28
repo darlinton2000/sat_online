@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SatController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => 'auth'], function() {
     
     Route::resources([
-        'users' => UserController::class
+        'users' => UserController::class,
+        'sat' => SatController::class
     ]);
 
 });
