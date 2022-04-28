@@ -45,3 +45,10 @@ php artisan db:seed
 ```
 php artisan serve
 ```
+
+## Acessar a aplicação
+Acesse a aplicação no navegador no endereço: [http://localhost:8000](http://localhost:8000)
+
+Deve aparecer uma opção de Login e Registro no canto superior direito da tela. Clique em Registrar e insira seus dados para se autenticar no sistema.
+
+Ainda não foram configuradas as restrições de acesso de acordo com o papel do usuário que está acessando o sistema. Você terá acesso a todas as funcionalidades que foram desenvolvidas até então.
